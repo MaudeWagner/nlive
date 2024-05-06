@@ -141,7 +141,7 @@ According to age at death (`traj.marg.group=c("ageDeath90")`) - values at the 10
 
 ![img](Readme_files/fig3.png) 
 
-#### Extract subject-specific predictions 
+### Extract subject-specific predictions 
 ``` r
 head(psi(pmm.abrupt.fit, type="mean"))
 ``` 
@@ -153,7 +153,7 @@ head(psi(pmm.abrupt.fit, type="mean"))
     ## [5,] -1.4742977 -0.026969207 -0.3554523 -3.960455
     ## [6,] -0.3757513 -0.008739808 -0.1729773 -3.857671
 
-#### Extract random effects 
+### Extract random effects 
 ``` r
 head(eta(pmm.abrupt.fit, type="mean"))
 ```
@@ -165,7 +165,7 @@ head(eta(pmm.abrupt.fit, type="mean"))
     ## [5,] -0.53423330 -0.007728255 -0.115472760  0.11876845
     ## [6,]  0.53464877  0.001995156  0.058633033 -0.25910762
     
-#### Boxplots of the random effects 
+### Boxplots of the random effects 
 ``` r
 saemix.plot.randeff(pmm.abrupt.fit)
 ``` 
