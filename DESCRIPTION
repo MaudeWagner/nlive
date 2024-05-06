@@ -1,0 +1,48 @@
+Package: nlive
+Type: Package
+Title: Automated Estimation of Sigmoidal and Piecewise Linear Mixed Models
+Version: 0.5.0
+Date: 2024-05-05
+Authors@R: c(person(given = "Maude",
+           family = "Wagner",
+           role = c("aut", "cre"),
+           email = "maude_wagner@rush.edu",
+           comment = c(ORCID = "0000-0002-1834-3218")),
+           person(given = "Ana W.",
+           family = "Capuano",
+           role = c("aut")),
+           person(given = "Emmanuelle",
+           family = "Comets",
+           role = c("ctb")))
+Maintainer: Maude Wagner <maude_wagner@rush.edu>
+Description: Estimation of relatively complex nonlinear mixed-effects models, including the Sigmoidal Mixed Model and the Piecewise Linear Mixed Model with abrupt or smooth transition, through a single intuitive line of code and with automated generation of starting values. 
+License: MIT + file LICENSE
+URL: https://github.com/MaudeWagner/nlive
+BugReports: https://github.com/MaudeWagner/nlive/issues
+Encoding: UTF-8
+LazyLoad: yes
+LazyData: yes
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+Depends: R (>= 2.10)
+Repository: CRAN
+Imports:
+    dplyr,
+    nlraa,
+    sqldf,   
+    ggplot2,
+    graphics, 
+    lcmm, 
+    saemix,
+    Rmisc,
+    sitar,
+    stats,
+    knitr, 
+    fastDummies
+Suggests: 
+    rmarkdown, 
+    MASS,
+    survival, 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+
