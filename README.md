@@ -140,3 +140,34 @@ For the most common profile of covariates (`traj.marg=TRUE`) - that is here part
 According to age at death (`traj.marg.group=c("ageDeath90")`) - values at the 10th vs. 90th percentiles are considered by default.
 
 ![img](Readme_files/fig3.png) 
+
+#### Extract subject-specific predictions 
+``` r
+head(psi(pmm.abrupt.fit, type="mean"))
+``` 
+    ##            [,1]         [,2]       [,3]      [,4]
+    ## [1,] -0.4407346 -0.010094826 -0.1829749 -3.795890
+    ## [2,] -1.0962085 -0.021387023 -0.2702190 -4.402796
+    ## [3,] -1.4489273 -0.011734242 -0.1828391 -4.222868
+    ## [4,] -2.3125194 -0.037893158 -0.4280412 -4.191715
+    ## [5,] -1.4742977 -0.026969207 -0.3554523 -3.960455
+    ## [6,] -0.3757513 -0.008739808 -0.1729773 -3.857671
+
+#### Extract random effects 
+``` r
+head(eta(pmm.abrupt.fit, type="mean"))
+```
+    ##             [,1]         [,2]         [,3]        [,4]
+    ## [1,]  0.56429219  0.007543470  0.011370603  0.88655030
+    ## [2,]  0.03368492  0.001122928  0.036148300 -0.92399512
+    ## [3,] -0.55159983  0.028859466  0.007349072 -0.22031669
+    ## [4,] -1.30823969 -0.022026587 -0.172103574 -0.06386854
+    ## [5,] -0.53423330 -0.007728255 -0.115472760  0.11876845
+    ## [6,]  0.53464877  0.001995156  0.058633033 -0.25910762
+    
+#### Boxplots of the random effects 
+``` r
+saemix.plot.randeff(pmm.abrupt.fit)
+``` 
+![img](Readme_files/fig4.png) 
+
